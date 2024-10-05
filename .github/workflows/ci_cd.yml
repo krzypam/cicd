@@ -23,6 +23,8 @@ jobs:
         pip install -r requirements.txt
 
     - name: Train model
+      env:
+        MLFLOW_TRACKING_URI: 'https://93fd-34-29-40-242.ngrok-free.app'  
       run: |
         python src/train.py
     
