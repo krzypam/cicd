@@ -30,4 +30,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: trained_model
-        path: models/trained_model.pkl
+        path: models/model.pkl
