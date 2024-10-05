@@ -45,10 +45,6 @@ jobs:
       with:
         python-version: '3.9'
     
-    - name: Install dependencies
-      run: |
-        pip install pytest
-    
     - name: Run unit tests
       run: |
-        pytest tests/
+        python tests/test.py
