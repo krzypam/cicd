@@ -6,6 +6,20 @@ on:
       - main
 
 jobs:
+  get_data:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+    - name: api 
+      run: |
+        python src/get_data.py
+
   train:
     runs-on: ubuntu-latest
     steps:
